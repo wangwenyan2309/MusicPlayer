@@ -1,0 +1,681 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+.play{
+	width: 541px;
+	height: 600px;
+	/*position: absolute;*/
+	left: 0;
+	right: 0;
+	top: 50px;
+	bottom: 0;
+	margin: auto;
+	/*background: #1B1B1B;*/
+	position: relative;
+}
+.play .play-list{
+	width: 541px;
+	/*height: 391px;*/
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: #1B1B1B;
+	display: block;
+}
+.play .play-list.hide{
+	display: none;
+}
+.play .play-info{
+	width: 541px;
+	height: 111px;
+	position: absolute;
+	left: 0;
+	bottom:0;
+	background: black;
+}
+.play .play-list .play-list-title{
+	width: 541px;
+	height: 52px;
+	background: black;
+	position: relative;
+}
+.play-list-title1{
+	width: 112px;
+	height: 52px;
+	/*background: red;*/
+	float: left;
+	text-align: center;
+	line-height: 52px;
+	background: #262626;
+}
+.play .play-list .play-list-title .play-list-title1 a{
+	font-size: 18px;
+	color: white;
+
+}
+.play .play-list .play-list-title .play-list-title1 i{
+	width: 18px;
+	height: 8px;
+	position: absolute;
+	left: 46px;
+	bottom: -8px;
+	background:url(../img/player_bg.png);
+	background-position: -502px -28px;
+}
+.play .play-list .play-list-title span{
+	color: white;
+	position: absolute;
+	right:40px;
+	font-size: 12px;
+	line-height: 52px;
+	cursor: pointer;
+	color: #999;
+}
+.play .play-list .play-list-title .xiaosanjiao{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 5px;
+	top: 0px;
+	background: url(../img/player_bg.png);
+	background-position: -270px -97px;
+	cursor: pointer;
+}
+
+
+.play-list .play-list-content{
+	width: 541px;
+	height: 450px;
+	position: relative;
+}
+.play-list .play-list-content li{
+	line-height: 40px;
+	padding-left: 10px;
+	color: #999;
+	margin-top: 5px;
+	height: 40px;
+	position: relative;
+	font-size: 14px;
+
+}
+.play-list .play-list-content li:hover{
+	color: white;
+	background: #000000;
+} 
+.play-list .play-list-content li:hover .op{
+	display: block;
+}
+.play-list .play-list-content li.playing{
+	color: #0CC65B;
+
+}
+.play-list .play-list-content li.playing:hover{
+	color: white;
+}
+.play-list .play-list-content li::after{
+	clear:both;
+}
+.play-list .play-list-content .song-name{
+	width: 40%;
+	height: 40px;
+	float: left;
+	font-size: 12px;
+	cursor: pointer;
+}
+.play-list .play-list-content .artist{
+	width: 40%;
+	height: 40px;
+	float: left;
+	font-size: 12px;
+	cursor: pointer;
+}
+.play-list .play-list-content .song-time{
+	width: 20%;
+	height: 40px;
+	float: left;
+	font-size: 12px;
+	cursor: pointer;
+}
+.play-list .play-list-content .op{
+	width: 120px;
+	height: 40px;
+	background: #000;
+	position: absolute;
+	right: 0px;
+	top: 0;
+	z-index: 100;
+	padding: 0px 20px;
+	display: none;
+}
+.play-list .play-list-content .op .like{
+	width: 15px;
+	height: 15px;
+	margin: 13px 0;
+	margin-right: 10px;
+	background: white;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: 0 -127px;
+}
+.play-list .play-list-content .op .like:hover{
+	background: url(../img/player_bg.png);
+	background-position: 0 -145px;
+	cursor: pointer;
+}
+.play-list .play-list-content .op .share{
+	width: 15px;
+	height: 15px;
+	margin: 13px 0;
+	margin-right: 10px;
+	background: white;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -17px -127px;
+}
+.play-list .play-list-content .op .share:hover{
+	background: url(../img/player_bg.png);
+	background-position: -17px -145px;
+	cursor: pointer;
+}
+.play-list .play-list-content .op .shoucang{
+	width: 15px;
+	height: 15px;
+	margin: 13px 0;
+	margin-right: 10px;
+	background: white;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -64px -128px;
+}
+.play-list .play-list-content .op .shoucang:hover{
+	background: url(../img/player_bg.png);
+	background-position: -64px -146px;
+	cursor: pointer;
+}
+.play-list .play-list-content .op .delete{
+	width: 15px;
+	height: 15px;
+	margin: 13px 0;
+	margin-right: 10px;
+	background: white;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -47px -128px;
+}
+.play-list .play-list-content .op .delete:hover{
+	background: url(../img/player_bg.png);
+	background-position: -47px -146px;
+	cursor: pointer;
+}
+
+
+.play-info .tupian{
+	width: 110px;
+	height: 110px;
+	float: left;
+	background: black;
+	position: relative;
+}
+.play-info .tupian img{
+	width: 90px;
+	height: 90px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	border: none;
+	/*background: black;*/
+}
+.play-info .song-info{
+	width: 330px;
+	height: 110px;
+	background:#000;
+	float: left;
+	position: relative;
+}
+.play-info .song-info .music-name{
+	width: 230px;
+	height: 20px;
+	/*background: red;*/
+	padding-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.play-info .song-info .music-name span{
+	font-size: 12px;
+	color: white;
+	text-align: left;
+	float: left;
+	line-height: 20px;
+}
+.play-info .song-info .music-name a{
+	float: left;
+	display: block;
+	width:95px;
+	height: 25px;
+	margin-left: 5px;
+	/*width: 30px;
+	height: 10px;*/
+	background: black;
+	background: url(../img/player_bg.png);
+	background-position: -450px -54px;
+}
+.singer-name{
+	width: 190px;
+	height: 20px;
+	/*background: red;*/
+	padding-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.singer-name span{
+	color: #828282;
+	font-size: 12px;
+}
+.music-time{
+	width: 190px;
+	height: 20px;
+	/*background: red;*/
+	padding-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.music-time span{
+	color: #828282;
+	font-size: 12px;
+}
+.music-op{
+	width: 190px;
+	height: 20px;
+	/*background: red;*/
+	padding-left: 15px;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	position: relative;
+}
+.music-op .like{
+	width: 15px;
+	height: 15px;
+	margin: 5px 0;
+	margin-right: 5px;
+	background: white;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: 0 -127px;
+}
+.music-op .like:hover{
+	background: url(../img/player_bg.png);
+	background-position: 0 -145px;
+	cursor: pointer;
+}
+.music-op .share{
+	width: 15px;
+	height: 15px;
+	margin: 5px 0;
+	margin-right: 5px;
+	background: white;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -17px -127px;
+}
+.music-op .share:hover{
+	background: url(../img/player_bg.png);
+	background-position: -17px -145px;
+	cursor: pointer;
+}
+.play-info .button{
+	width: 100px;
+	height: 110px;
+	background:#000;
+	float: left;
+	position: relative;
+
+}
+.play-info .button .songnumlist{
+	width: 49px;
+	height: 28px;
+	position: absolute;
+	top: 0;
+	right: 50px;
+	background: black;
+	background: url(../img/player_bg.png);
+	background-position: -221px -97px;
+	cursor: pointer;
+}
+.play-info .button .songnumlist span{
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	font-size: 12px;
+	color: #fff;
+}
+.play-info .button p{
+	position: absolute;
+	top: 5px;
+	right: 25px;
+	font-size: 14px;
+	color: #565656;
+	cursor: pointer;
+}
+.music-button{
+	width: 270px;
+	height: 42px;
+/*	background:red;*/
+	position: absolute;
+	right: 15px;
+	bottom: 25px;
+	padding-left: 20px;
+}
+.music-button .last{
+	width: 36px;
+	height: 28px;
+	background:black;
+	margin-top: 6px;
+	margin-right: 5px;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -69px 0;
+	cursor: pointer;
+
+}
+.music-button .last:hover{
+	background: url(../img/player_bg.png);
+	background-position: -69px -32px;
+}
+.music-button .play-button{
+	width: 40px;
+	height: 40px;
+	background:black;
+	margin-top: 1px;
+	margin-right: 5px;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -106px -2px;
+	cursor: pointer;
+
+}
+.music-button .play-button:hover{
+	background: url(../img/player_bg.png);
+	background-position: -106px -44px;	
+}
+
+.music-button .play-button.play-pause{
+	background: url(../img/player_bg.png);
+	background-position: -292px -90px;
+	cursor: pointer;
+
+}
+.music-button .play-button.play-pause:hover{
+	background: url(../img/player_bg.png);
+	background-position: -334px -90px;
+}
+.music-button .next{
+	width: 36px;
+	height: 28px;
+	background:black;
+	margin-top: 6px;
+	margin-right: 5px;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -148px -0px;
+	cursor: pointer;
+
+}
+.music-button .next:hover{
+	background: url(../img/player_bg.png);
+	background-position: -148px -32px;
+}
+.music-button .xunhuan{
+	width: 36px;
+	height: 28px;
+	background:black;
+	margin-top: 6px;
+	margin-right: 5px;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -220px -2px;
+	cursor: pointer;
+
+}
+
+.music-button .xunhuan.shunxu{
+	background: url(../img/player_bg.png);
+	background-position: -292px -33px;
+	cursor: pointer;
+
+}
+.music-button .xunhuan.shunxu:hover{
+	background: url(../img/player_bg.png);
+	background-position: -292px -61px;
+}
+.music-button .xunhuan.suiji{
+	background: url(../img/player_bg.png);
+	background-position: -328px -34px;
+	cursor: pointer;
+
+}
+.music-button .xunhuan.suiji:hover{
+	background: url(../img/player_bg.png);
+	background-position: -328px -62px;
+}
+.music-button .xunhuan.danqu{
+	background: url(../img/player_bg.png);
+	background-position: -255px -2px;
+	cursor: pointer;
+
+}
+.music-button .xunhuan.danqu:hover{
+	background: url(../img/player_bg.png);
+	background-position: -255px -34px;
+}
+.music-button .xunhuan.liebiao{
+	background: url(../img/player_bg.png);
+	background-position: -220px -2px;
+	cursor: pointer;
+
+}
+
+.music-button .xunhuan:hover{
+	background: url(../img/player_bg.png);
+	background-position: -220px -34px;
+}
+.morexunhuan{
+	width: 32px;
+	height: 98px;
+	position: absolute;
+	right: 125px;
+	top: -21px;
+	background: #383838;
+	border-radius: 3px;
+	display: none;
+}
+/*.music-button .xunhuan:hover .morexunhuan{
+	display: block;
+}*/
+
+.morexunhuan .danquxunhuan{
+	width: 32px;
+	height: 22px;
+	background: black;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	background: url(../img/player_bg.png);
+	background-position: -376px 0px;
+	cursor: pointer;
+
+}
+.morexunhuan .danquxunhuan:hover{
+	background: url(../img/player_bg.png);
+	background-position: -376px -22px;
+}
+.liebiaoxunhuan{
+	width: 32px;
+	height: 21px;
+	margin-top: 2px;
+	background: black;
+	margin-bottom: 2px;
+	background: url(../img/player_bg.png);
+	background-position: -376px -46px;
+	cursor: pointer;
+
+}
+.morexunhuan .liebiaoxunhuan:hover{
+	background: url(../img/player_bg.png);
+	background-position: -376px -68px;
+}
+.shunxubofang{
+	width: 32px;
+	height: 22px;
+	background: black;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	background: url(../img/player_bg.png);
+	background-position: -408px -0px;
+	cursor: pointer;
+
+}
+.morexunhuan .shunxubofang:hover{
+	background: url(../img/player_bg.png);
+	background-position: -408px -22px;
+}
+.suijibofang{
+	width: 32px;
+	height: 22px;
+	background: black;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	background: url(../img/player_bg.png);
+	background-position: -408px -44px;
+	cursor: pointer;
+
+}
+.morexunhuan .suijibofang:hover{
+	background: url(../img/player_bg.png);
+	background-position: -408px -66px;
+}
+.music-button .yinliang{
+	width: 24px;
+	height: 24px;
+	background:black;
+	margin-top: 8px;
+	margin-right: 5px;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -189px -4px;
+	cursor: pointer;
+
+}
+.music-button .yinliang.mute{
+	background: url(../img/player_bg.png);
+	background-position: -152px -64px;
+	cursor: pointer;
+}
+.music-button .yinliang.mute:hover{
+	background: url(../img/player_bg.png);
+	background-position: -189px -64px;
+}
+.music-button .yinliang:hover{
+	background: url(../img/player_bg.png);
+	background-position: -189px -36px;
+}
+.music-button .yinliangduan{
+	width: 73px;
+	height: 11px;
+	background: black;
+	margin-top: 15px;
+	float: left;
+	position: relative;
+	background: url(../img/player_bg.png);
+	background-position: -290px -12px;
+}
+.music-button .currentVolume{
+	width: 68px;
+	height: 11px;
+	background: black;
+	float: left;
+	background: url(../img/player_bg.png);
+	background-position: -290px -1px;
+	position: absolute;
+}
+.music-button .yinliangduan.moving .currentVolume{
+	background: url(../img/player_bg.png);
+	background-position: -290px -23px;
+
+}
+.music-button .yinliangduan.moving .dian{
+	background: url(../img/player_bg.png);
+	background-position: -366px -17px;
+
+}
+.music-button .dian{
+	width: 7px;
+	height: 11px;
+	float: left;
+	position: absolute;
+	left: 68px;	
+	background: url(../img/player_bg.png);
+	background-position: -366px -1px;
+	cursor: pointer;
+}
+
+.jindutiao{
+	width: 541px;
+	height: 5px;
+	background: #1B1B1B;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+.currentTime{
+	width: 0px;
+	height: 5px;
+	float: left;
+	position: absolute;
+	bottom: 0px
+	left:0px;
+	z-index: 3;
+	background: #0DC65B;
+}
+.timeDian{
+	width: 6px;
+	height: 6px;
+	position: absolute;
+	left: -3px;
+	bottom: 0px;
+	background: #fff;
+	border-radius: 50%;
+	z-index: 999;
+}
+.timeBox{
+	width: 46px;
+	height: 20px;
+	background: #307FC1;
+	position: absolute;
+	left: -20px;
+	bottom: 8px;
+	z-index: 1000;
+	display: none;
+}
+.timeBox span{
+	text-align: center;
+	line-height: 20px;
+	padding-left: 6px;
+	font-size: 14px;
+	color: white;
+}
+.kongbai{
+	width: 300px;
+	height: 500px;
+}
